@@ -3,6 +3,8 @@ package com.example.programacon_movil
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -20,16 +22,20 @@ fun TopAppBarSample() {
     CenterAlignedTopAppBar(
         title = {
             Text(
-                text = "Versión del estudiante B",
-                style = MaterialTheme.typography.titleLarge
+                text = "Versión combinada A + B",
+                style = MaterialTheme.typography.headlineSmall
             )
         },
         navigationIcon = {
-            IconButton(onClick = { /* abrir perfil */ }) {
+            IconButton(onClick = { /* abrir home o perfil */ }) {
+                Icon(Icons.Filled.Home, contentDescription = "Inicio")
                 Icon(Icons.Filled.AccountCircle, contentDescription = "Perfil")
             }
         },
         actions = {
+            IconButton(onClick = { /* abrir configuración */ }) {
+                Icon(Icons.Filled.Settings, contentDescription = "Configuración")
+            }
             IconButton(onClick = { /* abrir notificaciones */ }) {
                 Icon(Icons.Filled.Notifications, contentDescription = "Notificaciones")
             }
@@ -45,6 +51,6 @@ fun TopAppBarSample() {
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewTopAppBarSample_B() {
+fun PreviewTopAppBarSample() {
     TopAppBarSample()
 }
