@@ -3,8 +3,8 @@ package com.example.programacon_movil
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -20,18 +20,18 @@ fun TopAppBarSample() {
     CenterAlignedTopAppBar(
         title = {
             Text(
-                text = "Mi App Mejorada",
+                text = "Versión del estudiante B",
                 style = MaterialTheme.typography.titleLarge
             )
         },
         navigationIcon = {
-            IconButton(onClick = { /* TODO: abrir drawer o menú */ }) {
-                Icon(Icons.Filled.Menu, contentDescription = "Menú")
+            IconButton(onClick = { /* abrir perfil */ }) {
+                Icon(Icons.Filled.AccountCircle, contentDescription = "Perfil")
             }
         },
         actions = {
-            IconButton(onClick = { /* TODO: acción favorito */ }) {
-                Icon(Icons.Filled.Favorite, contentDescription = "Favorito")
+            IconButton(onClick = { /* abrir notificaciones */ }) {
+                Icon(Icons.Filled.Notifications, contentDescription = "Notificaciones")
             }
         },
         colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
@@ -45,6 +45,6 @@ fun TopAppBarSample() {
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewTopAppBarSample() {
+fun PreviewTopAppBarSample_B() {
     TopAppBarSample()
 }
