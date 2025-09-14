@@ -3,8 +3,8 @@ package com.example.programacon_movil
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -20,24 +20,24 @@ fun TopAppBarSample() {
     CenterAlignedTopAppBar(
         title = {
             Text(
-                text = "Mi App Mejorada",
-                style = MaterialTheme.typography.titleLarge
+                text = "Versión del compañero A",
+                style = MaterialTheme.typography.headlineSmall
             )
         },
         navigationIcon = {
-            IconButton(onClick = { /* TODO: abrir drawer o menú */ }) {
-                Icon(Icons.Filled.Menu, contentDescription = "Menú")
+            IconButton(onClick = { /* abrir home */ }) {
+                Icon(Icons.Filled.Home, contentDescription = "Inicio")
             }
         },
         actions = {
-            IconButton(onClick = { /* TODO: acción favorito */ }) {
-                Icon(Icons.Filled.Favorite, contentDescription = "Favorito")
+            IconButton(onClick = { /* abrir configuración */ }) {
+                Icon(Icons.Filled.Settings, contentDescription = "Configuración")
             }
         },
         colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-            containerColor = MaterialTheme.colorScheme.primary,
-            titleContentColor = MaterialTheme.colorScheme.onPrimary,
-            actionIconContentColor = MaterialTheme.colorScheme.onPrimary
+            containerColor = MaterialTheme.colorScheme.secondary,
+            titleContentColor = MaterialTheme.colorScheme.onSecondary,
+            actionIconContentColor = MaterialTheme.colorScheme.onSecondary
         ),
         modifier = Modifier.fillMaxWidth()
     )
@@ -45,6 +45,6 @@ fun TopAppBarSample() {
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewTopAppBarSample() {
+fun PreviewTopAppBarSample_A() {
     TopAppBarSample()
 }
