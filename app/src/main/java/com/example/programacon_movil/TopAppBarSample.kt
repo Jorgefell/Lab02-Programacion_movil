@@ -20,7 +20,7 @@ fun TopAppBarSample() {
     CenterAlignedTopAppBar(
         title = {
             Text(
-                text = "Mi App - edición por A",
+                text = "Mi App - edición por B (JORGE)",
                 style = MaterialTheme.typography.titleLarge
             )
         },
